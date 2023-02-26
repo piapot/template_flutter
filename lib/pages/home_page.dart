@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 import 'package:tailwind_colors/tailwind_colors.dart';
 import 'package:niku/namespace.dart' as n;
@@ -14,6 +17,7 @@ class HomePage extends StatelessWidget {
       body: n.Row([
         n.Column([
           n.Text("Home Page")..fontSize = 24,
+          n.Text(AppLocalizations.of(context)!.hello_world)..fontSize = 18,
           n.Button(
             n.Text('Go to unknown route page'),
             onPressed: () => Get.toNamed(Routes.unknownRoute),

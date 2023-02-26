@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
 import 'package:template_flutter/routes.dart';
@@ -35,6 +36,8 @@ class MyApp extends StatelessWidget {
         page: () => const UnknownRoutePage(),
       ),
       getPages: AppPages.routes,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }
